@@ -1,0 +1,537 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Semantic Web Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="shortcut icon" type="image/png" href="images/icon.png"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  </head>
+  <style type="text/css">
+#inspectionScore{
+border: 2px solid #dedede;
+    border-radius: 5px;
+    float: left;
+    padding-left: 10px;
+    position: relative;
+ width: 98%;
+
+}
+#GrossIncomeStatistics{
+border: 2px solid #dedede;
+    border-radius: 5px;
+    float: left;
+    padding-left: 10px;
+    position: relative;
+	 width: 98%;
+}
+#performanceStatistics{
+border: 2px solid #dedede;
+    border-radius: 5px;
+    float: left;
+    padding-left: 10px;
+    position: relative;
+	 width: 98%;
+}
+#correlationStatistics{
+border: 2px solid #dedede;
+    border-radius: 5px;
+    float: left;
+    padding-left: 10px;
+    position: relative;
+	 width: 98%;
+}
+.grid{
+position:relative;
+float:left;
+}
+</style>
+<body>
+<!-- container div -->
+<div id="mainDiv" class="container-fluid">
+  <div  id="mainInner" class="row-fluid">
+   <!-- right column -->
+    <div id="leftPanel" class="col-sm-12">
+	<!-- link div-->
+	 <div  id="navDiv" class="row link">
+	      <div class="col-sm-2 linkcolumn"></div>
+		  <div class="col-sm-2 linkcolumn"><a class="link">Homepage</a></div>
+		  <div class="col-sm-1 linkcolumn"><a class="link">Blogs</a></div>
+		  <div class="col-sm-1 linkcolumn"><a class="link">Photos</a></div>
+		  <div class="col-sm-1 linkcolumn"><a class="link">About</a></div>
+		  <div class="col-sm-1 linkcolumn"><a class="link">Links</a></div>
+		   <div class="col-sm-1 linkcolumn"><a class="link">Contact</a></div>
+		  <div class="col-sm-1 linkcolumn"></div>
+		  <div class="col-sm-1 "></div>
+		  <div class="col-sm-1 "></div>
+		 
+		  
+	 </div>
+	 <!-- main body content-->
+	 <div class="row content">
+	 <div id="mainContent">
+	 <h1>Paul G Mathew </h1>
+	    <p>.Hi there!.Im from India and I'm currently pursuing Master of Computer Science from <span class="utd" title="University of Texas at Dallas">UTD</span>. I have three years of Work Experience as Systems Engineer at Tata Consultancy Services and also worked as an intern in Ecomotto.Inc. Its been a good journey since I have been in US . My main Interest in the field of computer science is Machine Learning but I love
+		doing Web-Designing and Development.</p>
+	<p>My hobbies and Interests are </p>
+	<ul>
+	<li>Singing</li>
+	<li>playing guitar </li>
+		<li>Working Out </li>
+			<li>Reading Manga</li>
+				<li>Watching Anime</li>
+				<li>Working with Campus Ministry</li>
+	</ul>
+         
+	</div>
+	<div id="inspectionScore"    >
+	<div class="grid">
+		<h3 class="geochart-heading">Depicting Statewise Inspection score</h3>
+		<div id="inspectionScoreGeoChart" class="chart" style="width: 800px; height: 500px;">
+		</div>
+	</div>
+</div>
+<div id="GrossIncomeStatistics" class="page-section">
+	<div class="grid">
+		<h3 class="geochart-heading">Depicting Statewise Annual Gross Income</h3>
+		<p class="geochart-heading text-info small"></p>
+		<div id="agiGeoChart" class="chart" style="width: 800px; height: 500px;">
+		</div>
+		<div id="dual_x_div" class="piechart">
+		</div>
+	</div>
+</div>
+<div id="performanceStatistics" class="page-section">
+	<div class="grid">
+		<h3 class="geochart-heading">Depicting Statewise Performance</h3>
+		<p class="geochart-heading text-info small"></p>
+		<div id="performanceChart" class="chart" style="width: 800px; height: 500px;">
+		</div>
+	</div>
+	<div style= "position:relative;float:right:top:10px">
+	<select id="state">
+		  <option value='AL'>Alabama</option>
+		<option value='AK'>Alaska</option>
+		<option value='AZ'>Arizona</option>
+		<option value='AR'>Arkansas</option>
+		<option value='CA'>California</option> 
+		<option value='CO'>Colorado</option>
+		<option value='CT'>Connecticut</option>
+		<option value='DE'>Delaware</option>
+		<option value='DC'>Washington DC</option>
+		<option value='FL'>Florida</option>
+		<option value='GA'>Georgia </option>
+		<option value='HI'>Hawaii</option>
+		<option value='ID'>Idaho</option>
+		<option value='IL'>Illinois</option>
+		<option value='IN'>Indiana </option>
+		<option value='IA'>Iowa</option>
+		<option value='KS'>Kansas</option>
+		<option value='KY'>Kentucky</option>
+		<option value='LA'>Louisiana</option>
+		<option value='ME'>Maine</option>
+		<option value='MD'>Maryland</option>
+		<option value='MA'>Massachusetts</option>
+		<option value='MI'>Michigan</option>
+	    <option value='MN'>Minnesota</option>
+		<option value='MS'>Mississippi </option>
+		<option value='MO'>Missouri</option>
+		<option value='MT'>Montana</option>
+		<option value='NE'>Nebraska</option>
+		<option value='NV'>Nevada</option>
+		<option value='NH'>New Hampshire</option>
+		<option value='NJ'>New Jersey</option>
+		<option value='NM'>New Mexico</option>
+	    <option value='NY'>New York</option>
+		<option value='NC'>North Carolina</option>
+		<option value='ND'>North Dakota</option>
+		<option value='OH'>Ohio</option>
+		<option value='OK'>Oklahoma</option>
+		<option value='OR'>Oregon</option>
+	    <option value='PA'>Pennsylvania</option>
+		<option value='RI'>Rhode Island </option>
+		<option value='SC'>South Carolina </option>
+		<option value='SD'>South Dakota</option>
+		<option value='TN'>Tennessee</option>
+		<option value='TX' selected>Texas</option>
+		<option value='UT'>Utah</option>
+		<option value='VT'>Vermont</option>
+		<option value='VA'>Virginia</option>
+		<option value='WA'>Washington </option>
+		<option value='WV'>West Virginia</option>
+		<option value='WI'>Wisconsin </option>
+		<option value='WY'>Wyoming<</option>
+	</select>
+	</div>
+</div>
+
+<div id="correlationStatistics" class="page-section">
+	<div class="grid">
+		<h3 class="geochart-heading">Depicting Statewise Performance</h3>
+		<p class="geochart-heading text-info small"></p>
+		<div id="correlationChart" class="chart" style="width: 800px; height: 500px;">
+		</div>
+	</div>
+</div>
+
+</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"type="text/javascript"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+</script>
+<script>
+	google.load("visualization", "1", {packages:["corechart", "geochart"]});
+	google.charts.load('current', {'packages':['bar']});
+	//google.charts.load('current', {'packages':['corechart']});
+
+    google.setOnLoadCallback(drawVisualizations);
+	
+	function drawVisualizations(){
+	    stateWiseFipscode();
+		stateWiseInspectionScore();
+		//alert();
+		drawComparison();
+		performance();
+		correlation();
+		//drawOutflowGeochart();
+	//	drawInflowGeochart();
+		//drawDisasterVsOutflowChart();
+		//drawDisasterVsInflowChart();
+	}
+	 
+	$(document).ready(function(){
+	$("#state").change(function(){
+	//alert("change");
+	performance();
+	});
+	
+	});
+	function stateWiseInspectionScore() {
+		
+		var dataUrl = "http://localhost:3030/project/query?query=";
+	var queryString = "PREFIX dgp: <http://data-gov.tw.rpi.edu/vocab/p/1258/>" +
+	                           "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> " +
+	"SELECT ?s (AVG(xsd:float(?score)) AS ?AverageInspectionScore) " +
+     "WHERE{ " +
+ "graph <http://data-gov.tw.rpi.edu/vocab/Dataset_1258> " +
+ "{ " +
+" ?o dgp:inspection_score ?score . " +
+" ?o dgp:state_name ?s. " +
+ " } " +
+"} GROUP BY ?s ";
+		var fullQuery = dataUrl + encodeURIComponent(queryString) + "&output=csv";
+		var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        handleQueryResponse(xmlhttp.responseText);
+    }
+}
+xmlhttp.open("GET", fullQuery, true);
+xmlhttp.setRequestHeader ('Content-type', 'application/x-www-form-urlencoded');
+            xmlhttp.setRequestHeader ("Accept", "application/sparql-results+xml");
+xmlhttp.send();
+	 
+	  function handleQueryResponse(response) {
+	   // alert(response);
+		
+		var arrayData = $.csv.toArrays(response, {onParseValue: $.csv.hooks.castToScalar});
+		console.log(arrayData);
+		var data = new google.visualization.arrayToDataTable(arrayData);
+		var options = {colorAxis: {colors: ['#00BFFF', 'yellow', '#FE2E9A']}, datalessRegionColor:"#81F781", region: "US", resolution: "provinces"};
+		var chart = new google.visualization.GeoChart(document.getElementById('inspectionScoreGeoChart'));
+
+        chart.draw(data, options);
+		
+		//add selection listener to geochart
+	  }
+	}
+
+	function stateWiseFipscode() {
+		
+		var dataUrl = "http://localhost:3030/project/query?query=";
+	var queryString = "PREFIX dgp1356: <http://data-gov.tw.rpi.edu/vocab/p/1356/> " +
+	                           "PREFIX skos:  <http://www.w3.org/2004/02/skos/core#> " +
+	" SELECT ?state ?state_agi07 " +
+	" WHERE { "+
+    " graph <http://data-gov.tw.rpi.edu/vocab/Dataset_1356> "+
+    " { "+
+    " ?s dgp1356:county_code \"000\" . "+
+    " ?s dgp1356:year \"2007\" ."+
+    " ?s dgp1356:county_name ?state_name1356 . "+
+    " ?s dgp1356:agi ?state_agi07 . "+
+    " ?s dgp1356:state_code  ?state_fipscode . "+
+    " ?s dgp1356:state_abbrv ?state. "+
+	" } "+
+    " } " ;
+		var fullQuery = dataUrl + encodeURIComponent(queryString) + "&output=csv";
+		var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        handleQueryResponse(xmlhttp.responseText);
+    }
+}
+xmlhttp.open("GET", fullQuery, true);
+xmlhttp.setRequestHeader ('Content-type', 'application/x-www-form-urlencoded');
+            xmlhttp.setRequestHeader ("Accept", "application/sparql-results+xml");
+xmlhttp.send();
+	 
+	  function handleQueryResponse(response) {
+	   // alert(response);
+		
+		var arrayData = $.csv.toArrays(response, {onParseValue: $.csv.hooks.castToScalar});
+		console.log(arrayData);
+		var data = new google.visualization.arrayToDataTable(arrayData);
+		var options = {colorAxis: {colors: ['#00BFFF', 'yellow', '#FE2E9A']}, datalessRegionColor:"#81F781", region: "US", resolution: "provinces"};
+		var chart = new google.visualization.GeoChart(document.getElementById('agiGeoChart'));
+
+        chart.draw(data, options);
+		
+		//add selection listener to geochart
+	  }
+	}
+	
+	function drawComparison(){
+	var dataUrl = "http://localhost:3030/project/query?query=";
+	var queryString ="PREFIX dgp: <http://data-gov.tw.rpi.edu/vocab/p/1258/> "+
+" PREFIX dgp1356: <http://data-gov.tw.rpi.edu/vocab/p/1356/> "+
+" PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> "+
+  " SELECT ?st  (AVG(xsd:float(?score)) AS ?average) ?state_fipscode "+
+" WHERE{ "+
+" graph <http://data-gov.tw.rpi.edu/vocab/Dataset_1258> "+
+" { "+
+" ?o dgp:inspection_score ?score . "+
+" ?o dgp:state_name ?st. "+
+" } "+
+"  graph <http://data-gov.tw.rpi.edu/vocab/Dataset_1356> "+ 
+"     {  "+
+"    ?s dgp1356:county_code \"000\" . "+
+"    ?s dgp1356:year \"2007\" . "+
+"    ?s dgp1356:county_name ?state_name1356 . "+ 
+"    ?s dgp1356:agi ?state_agi07 . "+
+"    ?s dgp1356:state_code  ?state_fipscode . "+ 
+"    ?s dgp1356:state_abbrv ?state. "+
+"    ?s dgp1356:state_abbrv ?st. "+
+"	 } "+
+" } GROUP BY ?st ?state_fipscode ";
+	
+	var fullQuery = dataUrl + encodeURIComponent(queryString) + "&output=csv";
+		var xmlhttp = new XMLHttpRequest();
+		
+	//	alert(fullQuery);
+		xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        handleQueryResponse(xmlhttp.responseText);
+    }
+}
+	xmlhttp.open("GET", fullQuery, true);
+xmlhttp.setRequestHeader ('Content-type', 'application/x-www-form-urlencoded');
+            xmlhttp.setRequestHeader ("Accept", "application/sparql-results+xml");
+xmlhttp.send();
+var options = {
+          width: 800,
+
+          chart: {
+            title: 'Nearby galaxies',
+            subtitle: 'distance on the left, brightness on the right'
+          },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          series: {
+            0: { axis: 'Average' }, // Bind series 0 to an axis named 'distance'.
+            1: { axis: 'FIPScode' } // Bind series 1 to an axis named 'brightness'.
+          },
+          axes: {
+            x: {
+              distance: {label: 'parsecs'}, // Bottom x-axis.
+              brightness: {side: 'top', label: 'apparent magnitude'} // Top x-axis.
+            }
+          }
+        };
+
+		
+		function handleQueryResponse(response) {
+		//alert("hiiiiiii");
+	    //alert(response);
+		
+		var arrayData = $.csv.toArrays(response, {onParseValue: $.csv.hooks.castToScalar});
+		console.log(arrayData);
+		var data = new google.visualization.arrayToDataTable(arrayData);
+	//	var options = {colorAxis: {colors: ['#00BFFF', 'yellow', '#FE2E9A']}, datalessRegionColor:"#81F781", region: "US", resolution: "provinces"};
+		var bar =  new google.charts.Bar(document.getElementById('dual_x_div'));
+
+        bar.draw(data, options);
+		//alert("done");
+		//add selection listener to geochart
+	  }
+		
+		
+		
+	}
+	function performance()
+	{
+	var dataUrl = "http://localhost:3030/project/query?query=";
+	var state = $("#state").val();
+	var queryString = " PREFIX dgp: <http://data-gov.tw.rpi.edu/vocab/p/1258/> "+
+ " PREFIX dgp1356: <http://data-gov.tw.rpi.edu/vocab/p/1356/> "+
+ " PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> "+
+ " SELECT ?Year (xsd:float(?state_agi) AS ?AGI)   (xsd:float(?wage) AS ?WAGE) (xsd:float(?interest) AS ?Interest)  "+
+ " WHERE{ "+
+  " graph <http://data-gov.tw.rpi.edu/vocab/Dataset_1356> "+
+   "   {  "+
+   "  ?s dgp1356:county_code \"000\" . "+
+    "  ?s dgp1356:year ?Year . "+
+     " ?s dgp1356:county_name ?state_name1356 .  "+
+     " ?s dgp1356:agi ?state_agi. "+
+   "   ?s dgp1356:state_code  ?state_fipscode . "+
+     " ?s dgp1356:state_abbrv ?state ."+
+    "  ?s dgp1356:wages_salaries ?wage. "+
+     " ?s dgp1356:interest  ?interest. "+
+   "  ?s  dgp1356:dividends ?dividends. "+
+   " FILTER(?state = '"+state+"') "+
+	 " }  "+
+ "} ORDER BY DESC(?Year) ";
+
+	var fullQuery = dataUrl + encodeURIComponent(queryString) + "&output=csv";
+		var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        handleQueryResponse(xmlhttp.responseText);
+    }
+}
+xmlhttp.open("GET", fullQuery, true);
+xmlhttp.setRequestHeader ('Content-type', 'application/x-www-form-urlencoded');
+            xmlhttp.setRequestHeader ("Accept", "application/sparql-results+xml");
+xmlhttp.send();
+ function handleQueryResponse(response) {
+	   
+		
+		var arrayData = $.csv.toArrays(response, {onParseValue: $.csv.hooks.castToScalar});
+		console.log(arrayData);
+		 //alert(arrayData[0]);
+		var data = new google.visualization.arrayToDataTable(arrayData);
+	 var options = {
+          title: 'State Performance',
+          hAxis: {title: 'year',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+		var chart = new google.visualization.AreaChart(document.getElementById('performanceChart'));
+
+        chart.draw(data, options);
+		
+		//add selection listener to geochart
+	  }
+	 
+	
+	}
+	
+	$(window).resize(function(){
+		drawVisualizations();
+	});
+	
+	function correlation()
+	{
+	var dataUrl = "http://localhost:3030/project/query?query=";
+	var queryString = "PREFIX dgp: <http://data-gov.tw.rpi.edu/vocab/p/1258/> "+
+" PREFIX dgp1356: <http://data-gov.tw.rpi.edu/vocab/p/1356/> "+
+" PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> "+
+" SELECT ?st  (AVG(xsd:float(?score)) AS ?AverageInspectionScore) (?state_agi AS ?GrossIncome) ?wage ?interest ?dividends "+
+" WHERE{ "+
+" graph <http://data-gov.tw.rpi.edu/vocab/Dataset_1258> "+
+" { "+
+" ?o dgp:inspection_score ?score . "+
+" ?o dgp:state_name ?st. "+
+"  } "+
+"  graph <http://data-gov.tw.rpi.edu/vocab/Dataset_1356> "+ 
+"     {  "+
+"    ?s dgp1356:county_code \"000\" . "+
+"     ?s dgp1356:year \"2007\" . "+
+"     ?s dgp1356:county_name ?state_name1356 .  "+
+"     ?s dgp1356:agi ?state_agi.  "+
+"     ?s dgp1356:state_code  ?state_fipscode .  "+
+"     ?s dgp1356:state_abbrv ?state. "+
+"     ?s dgp1356:state_abbrv ?st. "+
+"     ?s dgp1356:wages_salaries ?wage.  "+
+"     ?s dgp1356:interest  ?interest. "+
+"     ?s  dgp1356:dividends ?dividends "+
+"	 }  "+
+" } GROUP BY ?st ?state_agi ?wage ?interest ?dividends ";
+
+	var fullQuery = dataUrl + encodeURIComponent(queryString) + "&output=csv";
+		var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        handleQueryResponse(xmlhttp.responseText);
+    }
+}
+xmlhttp.open("GET", fullQuery, true);
+xmlhttp.setRequestHeader ('Content-type', 'application/x-www-form-urlencoded');
+            xmlhttp.setRequestHeader ("Accept", "application/sparql-results+xml");
+xmlhttp.send();
+ function handleQueryResponse(response) {
+	   
+		
+		var arrayData = $.csv.toArrays(response, {onParseValue: $.csv.hooks.castToScalar});
+		console.log(arrayData);
+		// alert(arrayData[0]);
+		var data = new google.visualization.arrayToDataTable(arrayData);
+	   var options = {
+        title: 'Correlation between Inspection Score' +
+               'Wage and Average Gross Income',
+        hAxis: {title: 'AverageInspectionScore'},
+        vAxis: {title: 'GrossIncome'},
+        bubble: {
+          textStyle: {
+            fontSize: 10,
+            fontName: 'Times-Roman',
+            color: 'green',
+            bold: true,
+            italic: true
+          }
+        }
+      };
+
+
+		var chart = new google.visualization.BubbleChart(document.getElementById('correlationChart'));
+
+        chart.draw(data, options);
+		
+		//add selection listener to geochart
+	  }
+	 
+	
+	}
+	
+	$(window).resize(function(){
+		drawVisualizations();
+	});
+</script>
+	
+	
+	
+	
+	<div id="bottom">
+	 <img id="bottomImage" src="images/cs.jpg" alt="wow"/>
+	</div>
+	
+	
+	 </div>
+	
+	
+	</div>
+	
+	<!-- left column-->
+    
+</div>
+
+</body>
+</html>
